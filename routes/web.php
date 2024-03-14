@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/feed', function () {
+Route::get('/', [ DashboardController::class, 'index']);
+
+Route::get('/feed', function(){
     return view('feed');
 });
