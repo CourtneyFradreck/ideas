@@ -1,1 +1,1 @@
-# ideas
+# I am now learning laravel and this is my first laravel project, it is a twitter-clone called ideas(subjected to change). ^_^
