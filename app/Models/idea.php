@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class idea extends Model
 {
     use HasFactory;
+    protected $fillable = ['content', 'likes'];
 }
