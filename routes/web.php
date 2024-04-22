@@ -17,6 +17,8 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [ DashboardController::class, 'index']);
 
+Route::post('/idea', [ DashboardController::class, 'index'])->name('idea.create');
+
 Route::get('/feed', function(){
     return view('feed');
 });
