@@ -10,11 +10,14 @@ class DashboardController extends Controller
 {
     public function index(){
         $idea = new idea([
-            'content' => 'test',
+            'content' => 'courtney is a genius!!',
         ]);
 
         $idea->save();
 
-        return view('welcome');
+
+        return view('welcome',[
+            'ideas' => idea::orderBy('created_at', 'DESC')->get()
+        ]);
     }
 }

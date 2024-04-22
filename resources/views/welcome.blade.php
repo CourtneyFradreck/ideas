@@ -52,6 +52,7 @@
                     </div>
                 </div>
                 <hr>
+                @foreach ($ideas as $idea)
                 <div class="mt-3">
                     <div class="card">
                         <div class="px-3 pt-4 pb-2">
@@ -68,16 +69,16 @@
                         </div>
                         <div class="card-body">
                             <p class="fs-6 fw-light text-muted">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi temporibus quas autem hic praesentium voluptas, quo delectus error natus tempore exercitationem similique dolorem vitae voluptate placeat cupiditate, porro voluptatem. Quidem?
+                                {{$idea->content}}
                             </p>
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="#" class="fw-light nav-link fs-6"> <span class="fas fa-heart me-1">
-                                        </span> 100 </a>
+                                        </span> {{$idea->likes}} </a>
                                 </div>
                                 <div>
                                     <span class="fs-6 fw-light text-muted"> <span class="fas fa-clock"> </span>
-                                        3-5-2023 </span>
+                                        {{$idea->created_at}} </span>
                                 </div>
                             </div>
                             <div>
@@ -114,6 +115,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
             <div class="col-3">
                 <div class="card">
