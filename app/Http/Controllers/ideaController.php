@@ -10,10 +10,11 @@ class ideaController extends Controller
     public function store(){
         dump();
 
-        $idea = new idea([
+        $idea = idea::create([
             'content' => request()->get('yourIdea', null),
         ]);
 
         $idea->save();
+        return redirect()->route('dashboard');
     }
 }

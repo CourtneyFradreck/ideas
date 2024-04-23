@@ -16,7 +16,7 @@ use App\Http\Controllers\ideaController;
 |
 */
 
-Route::get('/', [ DashboardController::class, 'index']);
+Route::get('/', [ DashboardController::class, 'index'])->name('dashboard');
 
 Route::post('/idea', [ ideaController::class, 'store'])->name('idea.create');
 
