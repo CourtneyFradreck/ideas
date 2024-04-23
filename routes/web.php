@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ideaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [ DashboardController::class, 'index']);
 
-Route::post('/idea', [ DashboardController::class, 'index'])->name('idea.create');
+Route::post('/idea', [ ideaController::class, 'store'])->name('idea.create');
 
 Route::get('/feed', function(){
     return view('feed');
