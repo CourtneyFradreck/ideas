@@ -4,6 +4,9 @@
         @csrf
         <div class="mb-3">
             <textarea name="yourIdea" class="form-control" id="idea" rows="3"></textarea>
+            @error('yourIdea')
+                <span class="fs-6 text-danger mt-2"> {{$message}} </span>
+            @enderror
         </div>
         <div class="">
             <button class="btn btn-dark"> Share </button>
