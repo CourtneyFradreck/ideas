@@ -10,11 +10,11 @@ class ideaController extends Controller
     public function store(){
         
         request()->validate([
-            'yourIdea' => 'required|min:5|max:1000|'
+            'Idea' => 'required|min:5|max:1000|'
         ]);//idea char validation
 
         $idea = idea::create([
-            'content' => request()->get('yourIdea', null),
+            'content' => request()->get('Idea', null),
         ]);//create yourIdea
 
         $idea->save();
