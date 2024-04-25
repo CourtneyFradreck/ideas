@@ -46,7 +46,9 @@
                     @include('shared.idea-card')
                 </div>
                 @endforeach
-                {{ $ideas->links() }} <!--for pagination -->
+                <div class="mt-2">
+                    {{ $ideas->links() }} <!--for pagination -->
+                </div>
             </div>
             <div class="col-3">
                 <div class="card">
