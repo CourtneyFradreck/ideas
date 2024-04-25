@@ -10,6 +10,9 @@
                 </div>
             </div>
         </div>
+        <div class="d-flex align-items-flex-end">
+            <button class="btn btn-danger btn-sm">...</button> <!--still has to be finished-->
+        </div>
     </div>
     <div class="card-body">
         <p class="fs-6 fw-light text-muted">
