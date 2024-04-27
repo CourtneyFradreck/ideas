@@ -11,7 +11,9 @@
             </div>
         </div>
         <div class="d-flex align-items-flex-end">
-            <button class="btn btn-danger btn-sm">...</button> <!--still has to be finished-->
+            <form action="" method="post">
+                <button class="btn btn-danger btn-sm">...</button> <!--still has to be finished-->
+            </form>
         </div>
     </div>
     <div class="card-body">
