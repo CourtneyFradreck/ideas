@@ -20,4 +20,12 @@ class ideaController extends Controller
         $idea->save();
         return redirect()->route('dashboard')->with('success', 'Idea created succesfully!!') ;//displays a succes message if the idea was created succesfully
     }
+
+    //function to delete an idea
+    public function destroy($id){
+        $idea = idea::where('id', $id)->first();
+        $idea->delete();
+
+        return redirect()->route('dashboard')->with('success', 'Idea deleted succesfully'); 
+    }
 }

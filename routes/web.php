@@ -20,6 +20,8 @@ Route::get('/', [ DashboardController::class, 'index'])->name('dashboard');
 
 Route::post('/idea', [ ideaController::class, 'store'])->name('idea.create');
 
+Route::delete('/idea/{id}', [ ideaController::class, 'destroy'])->name('idea.destroy');
+
 Route::get('/feed', function(){
     return view('feed');
 });

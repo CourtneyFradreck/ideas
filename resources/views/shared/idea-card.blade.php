@@ -11,8 +11,10 @@
             </div>
         </div>
         <div class="d-flex align-items-flex-end">
-            <form action="" method="post">
-                <button class="btn btn-danger btn-sm">...</button> <!--still has to be finished-->
+            <form action="{{ route('idea.destroy', $idea->id)}}" method="post">
+                @csrf
+                @method('delete')
+                <button class="btn btn-danger btn-sm"> X </button> <!--still has to be finished-->
             </form>
         </div>
     </div>
